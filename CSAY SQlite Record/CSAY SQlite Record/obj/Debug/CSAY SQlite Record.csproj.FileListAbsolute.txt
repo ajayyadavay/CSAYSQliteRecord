@@ -1,0 +1,23 @@
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\CSAY SQlite Record.exe.config
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\CSAY SQlite Record.exe
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\CSAY SQlite Record.pdb
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\EntityFramework.dll
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\EntityFramework.SqlServer.dll
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\System.Data.SQLite.dll
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\System.Data.SQLite.EF6.dll
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\System.Data.SQLite.Linq.dll
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\EntityFramework.xml
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\EntityFramework.SqlServer.xml
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\System.Data.SQLite.xml
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\bin\Debug\System.Data.SQLite.dll.config
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY SQlite Record.csprojAssemblyReference.cache
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY_SQlite_Record.FrmProgramRecord.resources
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY_SQlite_Record.Properties.Resources.resources
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY SQlite Record.csproj.GenerateResource.cache
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY SQlite Record.csproj.CoreCompileInputs.cache
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY SQlite Record.csproj.CopyComplete
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY SQlite Record.exe
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY SQlite Record.pdb
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY_SQlite_Record.FrmRecordForm.resources
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY_SQlite_Record.FrmDisplayRecordFormat.resources
+F:\AY\VS_2017\C#\CSAY SQlite Record\CSAY SQlite Record\obj\Debug\CSAY_SQlite_Record.FrmAbout.resources

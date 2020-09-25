@@ -1,0 +1,3 @@
+Available
+Not Available
+Not Required
