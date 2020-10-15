@@ -72,6 +72,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.ComboBoxProjectName = new System.Windows.Forms.ComboBox();
             this.TxtProjectID = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -127,22 +128,28 @@
             this.label29 = new System.Windows.Forms.Label();
             this.TxtCube3 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.TxtUCName = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.TxtUCContact = new System.Windows.Forms.TextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.TxtRefer = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.TxtHeight = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.TxtWidth = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.TxtLength = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.TxtHeight = new System.Windows.Forms.TextBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.TxtRefer = new System.Windows.Forms.TextBox();
-            this.ComboBoxProjectName = new System.Windows.Forms.ComboBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TxtUCContact = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.TxtUCName = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.TxtContingencyPercent = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.TxtTotalNetPayable = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.TxtTotalContribution = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -158,9 +165,10 @@
             this.tabPage3.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // TxtAddWard
@@ -357,7 +365,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label10.Location = new System.Drawing.Point(10, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 23);
@@ -376,7 +384,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label11.Location = new System.Drawing.Point(10, 97);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 23);
@@ -611,7 +619,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Green;
-            this.groupBox3.Location = new System.Drawing.Point(692, 151);
+            this.groupBox3.Location = new System.Drawing.Point(672, 23);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(607, 134);
             this.groupBox3.TabIndex = 119;
@@ -642,6 +650,17 @@
             this.groupBox4.TabIndex = 120;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "General";
+            // 
+            // ComboBoxProjectName
+            // 
+            this.ComboBoxProjectName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxProjectName.FormattingEnabled = true;
+            this.ComboBoxProjectName.Location = new System.Drawing.Point(150, 55);
+            this.ComboBoxProjectName.Name = "ComboBoxProjectName";
+            this.ComboBoxProjectName.Size = new System.Drawing.Size(210, 28);
+            this.ComboBoxProjectName.TabIndex = 107;
+            this.ComboBoxProjectName.SelectedIndexChanged += new System.EventHandler(this.ComboBoxProjectName_SelectedIndexChanged);
             // 
             // TxtProjectID
             // 
@@ -1061,6 +1080,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox14);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -1294,58 +1314,37 @@
             this.tabPage4.Text = "U/C and Project Info";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // groupBox11
+            // groupBox13
             // 
-            this.groupBox11.Controls.Add(this.label17);
-            this.groupBox11.Controls.Add(this.TxtUCContact);
-            this.groupBox11.Controls.Add(this.label37);
-            this.groupBox11.Controls.Add(this.TxtUCName);
-            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.ForeColor = System.Drawing.Color.Green;
-            this.groupBox11.Location = new System.Drawing.Point(26, 35);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(673, 117);
-            this.groupBox11.TabIndex = 122;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "U/C Info";
+            this.groupBox13.Controls.Add(this.label43);
+            this.groupBox13.Controls.Add(this.TxtRefer);
+            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.ForeColor = System.Drawing.Color.Green;
+            this.groupBox13.Location = new System.Drawing.Point(769, 182);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(477, 96);
+            this.groupBox13.TabIndex = 124;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Refer Previous Estimate";
             // 
-            // label37
+            // label43
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(6, 34);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(212, 23);
-            this.label37.TabIndex = 105;
-            this.label37.Text = "36. User\'s Committee Name";
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Location = new System.Drawing.Point(6, 34);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(79, 23);
+            this.label43.TabIndex = 105;
+            this.label43.Text = "41. Refer";
             // 
-            // TxtUCName
+            // TxtRefer
             // 
-            this.TxtUCName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUCName.Location = new System.Drawing.Point(270, 33);
-            this.TxtUCName.Name = "TxtUCName";
-            this.TxtUCName.Size = new System.Drawing.Size(391, 26);
-            this.TxtUCName.TabIndex = 106;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(6, 76);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(258, 23);
-            this.label17.TabIndex = 107;
-            this.label17.Text = "37. User\'s Committee Contact No.";
-            // 
-            // TxtUCContact
-            // 
-            this.TxtUCContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUCContact.Location = new System.Drawing.Point(270, 75);
-            this.TxtUCContact.Name = "TxtUCContact";
-            this.TxtUCContact.Size = new System.Drawing.Size(391, 26);
-            this.TxtUCContact.TabIndex = 108;
+            this.TxtRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRefer.Location = new System.Drawing.Point(140, 35);
+            this.TxtRefer.Name = "TxtRefer";
+            this.TxtRefer.Size = new System.Drawing.Size(297, 26);
+            this.TxtRefer.TabIndex = 106;
             // 
             // groupBox12
             // 
@@ -1363,6 +1362,25 @@
             this.groupBox12.TabIndex = 123;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Project Info";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(6, 118);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(87, 23);
+            this.label40.TabIndex = 109;
+            this.label40.Text = "40. Height";
+            // 
+            // TxtHeight
+            // 
+            this.TxtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHeight.Location = new System.Drawing.Point(256, 118);
+            this.TxtHeight.Name = "TxtHeight";
+            this.TxtHeight.Size = new System.Drawing.Size(391, 26);
+            this.TxtHeight.TabIndex = 110;
             // 
             // label38
             // 
@@ -1402,67 +1420,133 @@
             this.TxtLength.Size = new System.Drawing.Size(391, 26);
             this.TxtLength.TabIndex = 106;
             // 
-            // label40
+            // groupBox11
             // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(6, 118);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(87, 23);
-            this.label40.TabIndex = 109;
-            this.label40.Text = "40. Height";
+            this.groupBox11.Controls.Add(this.label17);
+            this.groupBox11.Controls.Add(this.TxtUCContact);
+            this.groupBox11.Controls.Add(this.label37);
+            this.groupBox11.Controls.Add(this.TxtUCName);
+            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.ForeColor = System.Drawing.Color.Green;
+            this.groupBox11.Location = new System.Drawing.Point(26, 35);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(673, 117);
+            this.groupBox11.TabIndex = 122;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "U/C Info";
             // 
-            // TxtHeight
+            // label17
             // 
-            this.TxtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHeight.Location = new System.Drawing.Point(256, 118);
-            this.TxtHeight.Name = "TxtHeight";
-            this.TxtHeight.Size = new System.Drawing.Size(391, 26);
-            this.TxtHeight.TabIndex = 110;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(6, 76);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(258, 23);
+            this.label17.TabIndex = 107;
+            this.label17.Text = "37. User\'s Committee Contact No.";
             // 
-            // groupBox13
+            // TxtUCContact
             // 
-            this.groupBox13.Controls.Add(this.label43);
-            this.groupBox13.Controls.Add(this.TxtRefer);
-            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.ForeColor = System.Drawing.Color.Green;
-            this.groupBox13.Location = new System.Drawing.Point(769, 182);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(477, 96);
-            this.groupBox13.TabIndex = 124;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Refer Previous Estimate";
+            this.TxtUCContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUCContact.Location = new System.Drawing.Point(270, 75);
+            this.TxtUCContact.Name = "TxtUCContact";
+            this.TxtUCContact.Size = new System.Drawing.Size(391, 26);
+            this.TxtUCContact.TabIndex = 108;
             // 
-            // label43
+            // label37
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(6, 34);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(79, 23);
-            this.label43.TabIndex = 105;
-            this.label43.Text = "41. Refer";
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Location = new System.Drawing.Point(6, 34);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(212, 23);
+            this.label37.TabIndex = 105;
+            this.label37.Text = "36. User\'s Committee Name";
             // 
-            // TxtRefer
+            // TxtUCName
             // 
-            this.TxtRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRefer.Location = new System.Drawing.Point(140, 35);
-            this.TxtRefer.Name = "TxtRefer";
-            this.TxtRefer.Size = new System.Drawing.Size(297, 26);
-            this.TxtRefer.TabIndex = 106;
+            this.TxtUCName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUCName.Location = new System.Drawing.Point(270, 33);
+            this.TxtUCName.Name = "TxtUCName";
+            this.TxtUCName.Size = new System.Drawing.Size(391, 26);
+            this.TxtUCName.TabIndex = 106;
             // 
-            // ComboBoxProjectName
+            // groupBox14
             // 
-            this.ComboBoxProjectName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxProjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBoxProjectName.FormattingEnabled = true;
-            this.ComboBoxProjectName.Location = new System.Drawing.Point(150, 55);
-            this.ComboBoxProjectName.Name = "ComboBoxProjectName";
-            this.ComboBoxProjectName.Size = new System.Drawing.Size(210, 28);
-            this.ComboBoxProjectName.TabIndex = 107;
-            this.ComboBoxProjectName.SelectedIndexChanged += new System.EventHandler(this.ComboBoxProjectName_SelectedIndexChanged);
+            this.groupBox14.Controls.Add(this.label41);
+            this.groupBox14.Controls.Add(this.TxtTotalContribution);
+            this.groupBox14.Controls.Add(this.TxtContingencyPercent);
+            this.groupBox14.Controls.Add(this.label44);
+            this.groupBox14.Controls.Add(this.TxtTotalNetPayable);
+            this.groupBox14.Controls.Add(this.label45);
+            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.ForeColor = System.Drawing.Color.Green;
+            this.groupBox14.Location = new System.Drawing.Point(672, 197);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(607, 146);
+            this.groupBox14.TabIndex = 120;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Others (Not stored in Database)";
+            // 
+            // TxtContingencyPercent
+            // 
+            this.TxtContingencyPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContingencyPercent.Location = new System.Drawing.Point(197, 35);
+            this.TxtContingencyPercent.Name = "TxtContingencyPercent";
+            this.TxtContingencyPercent.Size = new System.Drawing.Size(394, 26);
+            this.TxtContingencyPercent.TabIndex = 102;
+            this.TxtContingencyPercent.Text = "3";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label44.Location = new System.Drawing.Point(10, 75);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(162, 23);
+            this.label44.TabIndex = 99;
+            this.label44.Text = "B. Total Net Payable";
+            // 
+            // TxtTotalNetPayable
+            // 
+            this.TxtTotalNetPayable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotalNetPayable.Location = new System.Drawing.Point(197, 72);
+            this.TxtTotalNetPayable.Name = "TxtTotalNetPayable";
+            this.TxtTotalNetPayable.Size = new System.Drawing.Size(394, 26);
+            this.TxtTotalNetPayable.TabIndex = 100;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label45.Location = new System.Drawing.Point(10, 38);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(136, 23);
+            this.label45.TabIndex = 101;
+            this.label45.Text = "A. Contingency %";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label41.Location = new System.Drawing.Point(10, 107);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(165, 23);
+            this.label41.TabIndex = 103;
+            this.label41.Text = "C. Total Contribution";
+            // 
+            // TxtTotalContribution
+            // 
+            this.TxtTotalContribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotalContribution.Location = new System.Drawing.Point(197, 104);
+            this.TxtTotalContribution.Name = "TxtTotalContribution";
+            this.TxtTotalContribution.Size = new System.Drawing.Size(394, 26);
+            this.TxtTotalContribution.TabIndex = 104;
             // 
             // FrmRecordForm
             // 
@@ -1501,12 +1585,14 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1628,5 +1714,12 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox TxtRefer;
         private System.Windows.Forms.ComboBox ComboBoxProjectName;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TextBox TxtContingencyPercent;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox TxtTotalNetPayable;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox TxtTotalContribution;
     }
 }

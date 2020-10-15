@@ -241,7 +241,9 @@ namespace CSAY_SQlite_Record
         {
             try
             {
-                string ProgramBudget, EstimatedBudget0, EstimatedBudget2;
+                //Initial Estimate
+                string ProgramBudget, EstimatedBudget0, EstimatedBudget2, EstimatedBudget1;
+                string Contingency_Percent;
 
                 //ProgramBudget
                 if (TxtAddProgramBudget.Text == "")
@@ -273,9 +275,38 @@ namespace CSAY_SQlite_Record
                     EstimatedBudget2 = TxtAddEstiBud2.Text;
                 }
 
-                double Contingency = Convert.ToDouble(ProgramBudget) * 3 / 100;
+                //contingency percent
+                if (TxtContingencyPercent.Text == "")
+                {
+                    Contingency_Percent = 3.ToString();
+                }
+                else
+                {
+                    Contingency_Percent = TxtContingencyPercent.Text;
+                }
+
+                double Contingency = Convert.ToDouble(ProgramBudget) * Convert.ToDouble(Contingency_Percent) / 100;
                 double NetPayable0 = Convert.ToDouble(ProgramBudget) - Contingency;
                 double Contribution0 = Convert.ToDouble(EstimatedBudget0) - NetPayable0;
+
+                //Frist running bill
+                double NetPayable1, Contribution1;
+                //EstimatedBudget2
+                if (TxtAddEstiBud1.Text == "")
+                {
+                    EstimatedBudget1 = 0.ToString();
+                }
+                else
+                {
+                    EstimatedBudget1 = TxtAddEstiBud1.Text;
+                }
+
+                NetPayable1 = Convert.ToDouble(EstimatedBudget1) * 0.9;
+                Contribution1 = Convert.ToDouble(EstimatedBudget1) - NetPayable1;
+                TxtAddNetPay1.Text = NetPayable1.ToString();
+                TxtAddContribution1.Text = Contribution1.ToString();
+
+                //Final Bill
                 double NetPayable2, Contribution2;
 
                 if (Convert.ToDouble(EstimatedBudget2) * 0.9 > NetPayable0)
@@ -287,13 +318,17 @@ namespace CSAY_SQlite_Record
                     NetPayable2 = Convert.ToDouble(EstimatedBudget2) * 0.9;
                 }
 
-                Contribution2 = Convert.ToDouble(EstimatedBudget2) - NetPayable2;
+                TxtTotalNetPayable.Text = NetPayable2.ToString();
+                Contribution2 = Convert.ToDouble(EstimatedBudget2) - NetPayable2 - Contribution1;
+                TxtTotalContribution.Text = (Contribution2 + Contribution1).ToString();
+
+                NetPayable2 = NetPayable2 - NetPayable1;
+                TxtAddNetPay2.Text = NetPayable2.ToString();
 
 
                 TxtAddContingency.Text = Contingency.ToString();
                 TxtAddNetPay0.Text = NetPayable0.ToString();
                 TxtAddContribution0.Text = Contribution0.ToString();
-                TxtAddNetPay2.Text = NetPayable2.ToString();
                 TxtAddContribution2.Text = Contribution2.ToString();
             }
             catch
