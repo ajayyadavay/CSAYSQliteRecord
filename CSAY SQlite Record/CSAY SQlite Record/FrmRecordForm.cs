@@ -156,7 +156,8 @@ namespace CSAY_SQlite_Record
 
                 TxtRefer.Text = "";
 
-                TxtAddLog.Text = "Activity: Record Successfully Added : " + ProjectName + " of " + Ward + " at " + Location;
+                TxtAddLog.AppendText("Activity: Record Successfully Added : " + ProjectName + " of " + Ward + " at " + Location);
+                TxtAddLog.AppendText(Environment.NewLine);
 
                 using (System.IO.StreamWriter sw = System.IO.File.AppendText(@".\Log\Log.txt"))
                 {
@@ -350,11 +351,11 @@ namespace CSAY_SQlite_Record
 
         private void BtnAddExit_Click(object sender, EventArgs e)
         {
-            using (System.IO.StreamWriter sw = System.IO.File.AppendText(@".\Log\Log.txt"))
+            /*using (System.IO.StreamWriter sw = System.IO.File.AppendText(@".\Log\Log.txt"))
             {
                 Text2Write = "[" + DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss") + "]" + "  --->  " + "EXIT"  + " ---> "+  "Record Form" ;
                 sw.WriteLine(Text2Write);
-            }
+            }*/
 
             Close();
         }
@@ -504,8 +505,9 @@ namespace CSAY_SQlite_Record
                     "CurrentStatus,Description,Remark,LabReport,Board," +
                     "ProgramBudget,Contingency,EstimatedBudget0,NetPayable0,Contribution0," +
                     "EstimatedBudget1,NetPayable1,Contribution1,EstimatedBudget2,NetPayable2," +
-                    "Contribution2,Cube1,Cube2,Cube3,Cube4,Cube5,Cube6,Cube7,Cube8,Cube9) " +
-                   "VALUES('" + FiscalYear + "','" + ProjectName + "','" + Ward + "','" + Location + "'," +
+                    "Contribution2,Cube1,Cube2,Cube3,Cube4,Cube5,Cube6,Cube7,Cube8,Cube9,UCName,UCContact," +
+                    "Length,Width,Height,Refer) " +
+                   "VALUES('" + ProjectID + "', '" + FiscalYear + "','" + ProjectName + "','" + Ward + "','" + Location + "'," +
                     "'" + BudgetType + "','" + WorkPermit + "','" + WorkStart + "','" + FirstRunningBill + "'" +
                     ",'" + FinalBill + "','" + CurrentStatus + "','" + Description + "','" + Remark + "'" +
                     ",'" + LabReport + "','" + Board + "','" + ProgramBudget + "','" + Contingency + "','" + EstimatedBudget0 + "','" + NetPayable0 + "'" +
@@ -520,7 +522,8 @@ namespace CSAY_SQlite_Record
 
                 ConnectDb.Close();
 
-                TxtAddLog.Text = "Activity: Successfully Modified Record: " + "Project ID: " + ProjectID + "  " +ProjectName + " of " + Ward + " at " + Location;
+                TxtAddLog.AppendText("Activity: Successfully Modified Record: " + "Project ID: " + ProjectID + "  " +ProjectName + " of " + Ward + " at " + Location);
+                TxtAddLog.AppendText(Environment.NewLine);
 
                 using (System.IO.StreamWriter sw = System.IO.File.AppendText(@".\Log\Log.txt"))
                 {
@@ -564,7 +567,8 @@ namespace CSAY_SQlite_Record
 
                     TxtProjectID.Text = "";
 
-                    TxtAddLog.Text = "Deleted Projedt ID: " + ProjectID + " => " + ProjectName + " of " + Ward + " at " + Location;
+                    TxtAddLog.AppendText("Deleted Projedt ID: " + ProjectID + " => " + ProjectName + " of " + Ward + " at " + Location);
+                    TxtAddLog.AppendText(Environment.NewLine);
 
                     using (System.IO.StreamWriter sw = System.IO.File.AppendText(@".\Log\Log.txt"))
                     {
@@ -583,7 +587,8 @@ namespace CSAY_SQlite_Record
         {
             if (TxtProjectID.Text == "")
             {
-                TxtAddLog.Text = "Enter Project ID to Display"; 
+                TxtAddLog.AppendText("Enter Project ID to Display");
+                TxtAddLog.AppendText(Environment.NewLine);
             }
             else
             {
@@ -662,8 +667,8 @@ namespace CSAY_SQlite_Record
                 string Ward = TxtAddWard.Text;
                 string Location = TxtAddLocation.Text;
 
-                TxtAddLog.Text = "Displayed Projedt ID: " + ProjectID + " => " + ProjectName + " of " + Ward + " at " + Location;
-
+                TxtAddLog.AppendText("Displayed Projedt ID: " + ProjectID + " => " + ProjectName + " of " + Ward + " at " + Location);
+                TxtAddLog.AppendText(Environment.NewLine);
             }
         }
         public void StoreDatainRecordFormat()

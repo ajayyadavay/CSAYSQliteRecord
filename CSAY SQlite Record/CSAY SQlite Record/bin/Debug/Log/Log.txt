@@ -16,3 +16,13 @@
 [Wednesday, 14 October 2020 18:58:08]  --->  EXIT ---> Record Form
 [Wednesday, 14 October 2020 19:01:28]  --->  EXIT ---> Record Form
 [Wednesday, 14 October 2020 19:05:04]  --->  EXIT ---> Record Form
+[Thursday, 05 November 2020 07:17:40]  --->  ADD ---> Compound Wall of 7 at Dodharpa
+[Thursday, 05 November 2020 07:19:22]  --->  EXIT ---> Record Form
+[Thursday, 05 November 2020 07:35:03]  --->  MODIFY ---> Project ID: 1  Compound Wall of 7 at Dodharpa
+[Thursday, 05 November 2020 07:35:27]  --->  MODIFY ---> Project ID: 1  Compound Wall of 7 at Dodharpa
+[Thursday, 05 November 2020 08:01:26]  --->  MODIFY ---> Project ID: 1  Compound Wall of 7 at Dodharpa
+[Thursday, 05 November 2020 08:05:19]  --->  MODIFY ---> Project ID: 1  Compound Wall of 7 at Dodharpa
+[Thursday, 05 November 2020 08:05:45]  --->  ADD ---> Gravel Road of 7 at Dodharpa
+[Thursday, 05 November 2020 08:06:07]  --->  MODIFY ---> Project ID: 2  Gravel Road of 7 at Dodharpa
+[Thursday, 05 November 2020 08:06:25]  --->  DELETE ---> Project ID: 2  Gravel Road of 7 at Dodharpa
+[Thursday, 05 November 2020 08:07:49]  --->  ADD ---> Krishi Sadak of 8 at Nayabasti
