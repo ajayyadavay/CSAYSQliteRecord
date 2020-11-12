@@ -74,23 +74,35 @@ namespace CSAY_SQlite_Record
         private void FrmProgramRecord_Load(object sender, EventArgs e)
         {
             //Filter --> Heading --> Level 1
-            ComboBoxFilterBy.Items.Add("ProjectID");
+            string[] FilterLevel1 = System.IO.File.ReadAllLines(@".\ComboBoxList\FilterLevel1.txt");
+            foreach (var line in FilterLevel1) 
+            {
+                //string[] tokens = line.Split('\n');
+                ComboBoxFilterBy.Items.Add(line);
+            }
+            /*ComboBoxFilterBy.Items.Add("ProjectID");
             ComboBoxFilterBy.Items.Add("ProjectName");
             ComboBoxFilterBy.Items.Add("Ward");
             ComboBoxFilterBy.Items.Add("BudgetType");
             ComboBoxFilterBy.Items.Add("CurrentStatus");
             ComboBoxFilterBy.Items.Add("Remark");
             ComboBoxFilterBy.Items.Add("LabReport");
-            ComboBoxFilterBy.Items.Add("Board");
+            ComboBoxFilterBy.Items.Add("Board");*/
 
             //Filter --> Heading --> Level 2
-            ComboBoxFilterByLevel2.Items.Add("Ward");
+            string[] FilterLevel2 = System.IO.File.ReadAllLines(@".\ComboBoxList\FilterLevel2.txt");
+            foreach (var line in FilterLevel2)
+            {
+                //string[] tokens = line.Split('\n');
+                ComboBoxFilterByLevel2.Items.Add(line);
+            }
+            /*ComboBoxFilterByLevel2.Items.Add("Ward");
             ComboBoxFilterByLevel2.Items.Add("BudgetType");
             ComboBoxFilterByLevel2.Items.Add("CurrentStatus");
             ComboBoxFilterByLevel2.Items.Add("Remark");
             ComboBoxFilterByLevel2.Items.Add("LabReport");
-            ComboBoxFilterByLevel2.Items.Add("Board");
-            
+            ComboBoxFilterByLevel2.Items.Add("Board");*/
+
         }
 
         private void BtnFilter_Click(object sender, EventArgs e)
