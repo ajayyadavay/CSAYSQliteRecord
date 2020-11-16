@@ -173,6 +173,14 @@ namespace CSAY_SQlite_Record
 
         private void FrmAdd_Load(object sender, EventArgs e)
         {
+            //Add ---> Fiscal year 
+            string[] FiscalYearList = System.IO.File.ReadAllLines(@".\ComboBoxList\FiscalYear.txt");
+            foreach (var line in FiscalYearList)
+            {
+                //string[] tokens = line.Split('\n');
+                ComboBoxFiscalYear.Items.Add(line);
+            }
+
             //Add ---> Project Name
             string[] ProjectNameList =System.IO.File.ReadAllLines(@".\ComboBoxList\ProjectName.txt");
             foreach (var line in ProjectNameList)
@@ -435,6 +443,13 @@ namespace CSAY_SQlite_Record
             TxtHeight.Text = "";
 
             TxtRefer.Text = "";
+
+            ComboBoxFiscalYear.SelectedIndex = -1;
+            ComboBoxProjectName.SelectedIndex = -1;
+            ComboBoxAddCurStatus.SelectedIndex = -1;
+            ComboBoxAddBudgetType.SelectedIndex = -1;
+            ComboBoxLabReport.SelectedIndex = -1;
+            ComboBoxBoard.SelectedIndex = -1;
         }
 
         private void BtnModify_Click(object sender, EventArgs e)
@@ -975,6 +990,11 @@ namespace CSAY_SQlite_Record
         private void ComboBoxProjectName_SelectedIndexChanged(object sender, EventArgs e)
         {
             TxtAddProjecName.Text = ComboBoxProjectName.Text;
+        }
+
+        private void ComboBoxFiscalYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtAddFiscalYear.Text = ComboBoxFiscalYear.Text;
         }
 
         private void ComboBoxBoard_SelectedIndexChanged(object sender, EventArgs e)

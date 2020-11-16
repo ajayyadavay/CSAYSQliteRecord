@@ -107,6 +107,13 @@
             this.label24 = new System.Windows.Forms.Label();
             this.TxtFirstRunBill = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.TxtTotalContribution = new System.Windows.Forms.TextBox();
+            this.TxtContingencyPercent = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.TxtTotalNetPayable = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.TxtCube9 = new System.Windows.Forms.TextBox();
@@ -143,13 +150,7 @@
             this.TxtUCContact = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.TxtUCName = new System.Windows.Forms.TextBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.TxtContingencyPercent = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.TxtTotalNetPayable = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.TxtTotalContribution = new System.Windows.Forms.TextBox();
+            this.ComboBoxFiscalYear = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -162,13 +163,13 @@
             this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // TxtAddWard
@@ -470,9 +471,9 @@
             // TxtAddFiscalYear
             // 
             this.TxtAddFiscalYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAddFiscalYear.Location = new System.Drawing.Point(498, 19);
+            this.TxtAddFiscalYear.Location = new System.Drawing.Point(616, 19);
             this.TxtAddFiscalYear.Name = "TxtAddFiscalYear";
-            this.TxtAddFiscalYear.Size = new System.Drawing.Size(206, 26);
+            this.TxtAddFiscalYear.Size = new System.Drawing.Size(88, 26);
             this.TxtAddFiscalYear.TabIndex = 104;
             // 
             // label16
@@ -628,6 +629,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.ComboBoxFiscalYear);
             this.groupBox4.Controls.Add(this.ComboBoxProjectName);
             this.groupBox4.Controls.Add(this.TxtProjectID);
             this.groupBox4.Controls.Add(this.label20);
@@ -1092,6 +1094,81 @@
             this.tabPage2.Text = "Budget";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.label41);
+            this.groupBox14.Controls.Add(this.TxtTotalContribution);
+            this.groupBox14.Controls.Add(this.TxtContingencyPercent);
+            this.groupBox14.Controls.Add(this.label44);
+            this.groupBox14.Controls.Add(this.TxtTotalNetPayable);
+            this.groupBox14.Controls.Add(this.label45);
+            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.ForeColor = System.Drawing.Color.Green;
+            this.groupBox14.Location = new System.Drawing.Point(672, 197);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(607, 146);
+            this.groupBox14.TabIndex = 120;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Others (Not stored in Database)";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label41.Location = new System.Drawing.Point(10, 107);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(165, 23);
+            this.label41.TabIndex = 103;
+            this.label41.Text = "C. Total Contribution";
+            // 
+            // TxtTotalContribution
+            // 
+            this.TxtTotalContribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotalContribution.Location = new System.Drawing.Point(197, 104);
+            this.TxtTotalContribution.Name = "TxtTotalContribution";
+            this.TxtTotalContribution.Size = new System.Drawing.Size(394, 26);
+            this.TxtTotalContribution.TabIndex = 104;
+            // 
+            // TxtContingencyPercent
+            // 
+            this.TxtContingencyPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContingencyPercent.Location = new System.Drawing.Point(197, 35);
+            this.TxtContingencyPercent.Name = "TxtContingencyPercent";
+            this.TxtContingencyPercent.Size = new System.Drawing.Size(394, 26);
+            this.TxtContingencyPercent.TabIndex = 102;
+            this.TxtContingencyPercent.Text = "3";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label44.Location = new System.Drawing.Point(10, 75);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(162, 23);
+            this.label44.TabIndex = 99;
+            this.label44.Text = "B. Total Net Payable";
+            // 
+            // TxtTotalNetPayable
+            // 
+            this.TxtTotalNetPayable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTotalNetPayable.Location = new System.Drawing.Point(197, 72);
+            this.TxtTotalNetPayable.Name = "TxtTotalNetPayable";
+            this.TxtTotalNetPayable.Size = new System.Drawing.Size(394, 26);
+            this.TxtTotalNetPayable.TabIndex = 100;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label45.Location = new System.Drawing.Point(10, 38);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(136, 23);
+            this.label45.TabIndex = 101;
+            this.label45.Text = "A. Contingency %";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox9);
@@ -1473,80 +1550,16 @@
             this.TxtUCName.Size = new System.Drawing.Size(391, 26);
             this.TxtUCName.TabIndex = 106;
             // 
-            // groupBox14
+            // ComboBoxFiscalYear
             // 
-            this.groupBox14.Controls.Add(this.label41);
-            this.groupBox14.Controls.Add(this.TxtTotalContribution);
-            this.groupBox14.Controls.Add(this.TxtContingencyPercent);
-            this.groupBox14.Controls.Add(this.label44);
-            this.groupBox14.Controls.Add(this.TxtTotalNetPayable);
-            this.groupBox14.Controls.Add(this.label45);
-            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.ForeColor = System.Drawing.Color.Green;
-            this.groupBox14.Location = new System.Drawing.Point(672, 197);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(607, 146);
-            this.groupBox14.TabIndex = 120;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Others (Not stored in Database)";
-            // 
-            // TxtContingencyPercent
-            // 
-            this.TxtContingencyPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContingencyPercent.Location = new System.Drawing.Point(197, 35);
-            this.TxtContingencyPercent.Name = "TxtContingencyPercent";
-            this.TxtContingencyPercent.Size = new System.Drawing.Size(394, 26);
-            this.TxtContingencyPercent.TabIndex = 102;
-            this.TxtContingencyPercent.Text = "3";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label44.Location = new System.Drawing.Point(10, 75);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(162, 23);
-            this.label44.TabIndex = 99;
-            this.label44.Text = "B. Total Net Payable";
-            // 
-            // TxtTotalNetPayable
-            // 
-            this.TxtTotalNetPayable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalNetPayable.Location = new System.Drawing.Point(197, 72);
-            this.TxtTotalNetPayable.Name = "TxtTotalNetPayable";
-            this.TxtTotalNetPayable.Size = new System.Drawing.Size(394, 26);
-            this.TxtTotalNetPayable.TabIndex = 100;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label45.Location = new System.Drawing.Point(10, 38);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(136, 23);
-            this.label45.TabIndex = 101;
-            this.label45.Text = "A. Contingency %";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label41.Location = new System.Drawing.Point(10, 107);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(165, 23);
-            this.label41.TabIndex = 103;
-            this.label41.Text = "C. Total Contribution";
-            // 
-            // TxtTotalContribution
-            // 
-            this.TxtTotalContribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotalContribution.Location = new System.Drawing.Point(197, 104);
-            this.TxtTotalContribution.Name = "TxtTotalContribution";
-            this.TxtTotalContribution.Size = new System.Drawing.Size(394, 26);
-            this.TxtTotalContribution.TabIndex = 104;
+            this.ComboBoxFiscalYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxFiscalYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxFiscalYear.FormattingEnabled = true;
+            this.ComboBoxFiscalYear.Location = new System.Drawing.Point(494, 19);
+            this.ComboBoxFiscalYear.Name = "ComboBoxFiscalYear";
+            this.ComboBoxFiscalYear.Size = new System.Drawing.Size(116, 28);
+            this.ComboBoxFiscalYear.TabIndex = 108;
+            this.ComboBoxFiscalYear.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFiscalYear_SelectedIndexChanged);
             // 
             // FrmRecordForm
             // 
@@ -1581,6 +1594,8 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
@@ -1591,8 +1606,6 @@
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1721,5 +1734,6 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox TxtTotalContribution;
+        private System.Windows.Forms.ComboBox ComboBoxFiscalYear;
     }
 }
