@@ -156,6 +156,16 @@ namespace CSAY_SQlite_Record
 
                 TxtRefer.Text = "";
 
+                ComboBoxFiscalYear.SelectedIndex = -1;
+                ComboBoxProjectName.SelectedIndex = -1;
+                ComboBoxAddCurStatus.SelectedIndex = -1;
+                ComboBoxAddBudgetType.SelectedIndex = -1;
+                ComboBoxLabReport.SelectedIndex = -1;
+                ComboBoxBoard.SelectedIndex = -1;
+
+                LblCheck.Text = "Log: " ;
+                LblCheck.ForeColor = Color.Black;
+
                 TxtAddLog.AppendText("Activity: Record Successfully Added : " + ProjectName + " of " + Ward + " at " + Location);
                 TxtAddLog.AppendText(Environment.NewLine);
 
@@ -310,35 +320,62 @@ namespace CSAY_SQlite_Record
                     EstimatedBudget1 = TxtAddEstiBud1.Text;
                 }
 
-                NetPayable1 = Convert.ToDouble(EstimatedBudget1) * 0.9;
+                //Netpayable1
+                if (TxtAddNetPay1.Text == "")
+                {
+                    NetPayable1 = 0;
+                }
+                else
+                {
+                    NetPayable1 = Convert.ToDouble(TxtAddNetPay1.Text);
+                }
+
+                //NetPayable1 = Convert.ToDouble(EstimatedBudget1) * 0.9;
                 Contribution1 = Convert.ToDouble(EstimatedBudget1) - NetPayable1;
-                TxtAddNetPay1.Text = NetPayable1.ToString();
+                //TxtAddNetPay1.Text = NetPayable1.ToString();
                 TxtAddContribution1.Text = Contribution1.ToString();
 
-                //Final Bill
-                double NetPayable2, Contribution2;
+                
 
-                if (Convert.ToDouble(EstimatedBudget2) * 0.9 > NetPayable0)
+                //Final Bill
+                double NetPayable2, Contribution2,TotalNetPay,TotalContribution;
+
+                /*if (Convert.ToDouble(EstimatedBudget2) * 0.9 > NetPayable0)
                 {
                     NetPayable2 = NetPayable0;
                 }
                 else
                 {
                     NetPayable2 = Convert.ToDouble(EstimatedBudget2) * 0.9;
+                }*/
+
+                //TxtTotalNetPayable.Text = NetPayable2.ToString();
+                //Contribution2 = Convert.ToDouble(EstimatedBudget2) - NetPayable2 - Contribution1;
+                TotalNetPay = Convert.ToDouble(TxtTotalNetPayable.Text);
+                TotalContribution = Convert.ToDouble(TxtTotalContribution.Text);
+                NetPayable2 = TotalNetPay - NetPayable1;
+                Contribution2 = TotalContribution - Contribution1;
+                if(TotalNetPay <= NetPayable0)
+                {
+                    LblCheck.Text = "Log: " + "OK";
+                    LblCheck.ForeColor = Color.Green;
                 }
+                else
+                {
+                    LblCheck.Text = "Log: " + "Review";
+                    LblCheck.ForeColor = Color.Red;
+                }
+                //TxtTotalContribution.Text = (Contribution2 + Contribution1).ToString();
 
-                TxtTotalNetPayable.Text = NetPayable2.ToString();
-                Contribution2 = Convert.ToDouble(EstimatedBudget2) - NetPayable2 - Contribution1;
-                TxtTotalContribution.Text = (Contribution2 + Contribution1).ToString();
-
-                NetPayable2 = NetPayable2 - NetPayable1;
-                TxtAddNetPay2.Text = NetPayable2.ToString();
+                //NetPayable2 = NetPayable2 - NetPayable1;
+                //TxtAddNetPay2.Text = NetPayable2.ToString();
 
 
                 TxtAddContingency.Text = Contingency.ToString();
                 TxtAddNetPay0.Text = NetPayable0.ToString();
                 TxtAddContribution0.Text = Contribution0.ToString();
                 TxtAddContribution2.Text = Contribution2.ToString();
+                TxtAddNetPay2.Text = NetPayable2.ToString();
             }
             catch
             {
@@ -377,6 +414,9 @@ namespace CSAY_SQlite_Record
             BtnDelete.Enabled = false;
             BtnModify.Enabled = false;
             BtnDisplay.Enabled = false;
+
+            LblCheck.Text = "Log: ";
+            LblCheck.ForeColor = Color.Black;
         }
 
         private void RadioBtnDisModDel_CheckedChanged(object sender, EventArgs e)
@@ -388,6 +428,9 @@ namespace CSAY_SQlite_Record
             BtnDelete.Enabled = true;
             BtnModify.Enabled = true;
             BtnDisplay.Enabled = true;
+
+            LblCheck.Text = "Log: ";
+            LblCheck.ForeColor = Color.Black;
         }
         public void DeleteTextFields()
         {
@@ -545,6 +588,8 @@ namespace CSAY_SQlite_Record
                     Text2Write = "[" + DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss") + "]" + "  --->  " + "MODIFY" + " ---> " + "Project ID: " + ProjectID + "  " + ProjectName + " of " + Ward + " at " + Location;
                     sw.WriteLine(Text2Write);
                 }
+                LblCheck.Text = "Log: ";
+                LblCheck.ForeColor = Color.Black;
             }
             else if (dr == DialogResult.No)
             {
@@ -590,11 +635,15 @@ namespace CSAY_SQlite_Record
                         Text2Write = "[" + DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss") + "]" + "  --->  " + "DELETE" + " ---> " + "Project ID: " + ProjectID + "  " + ProjectName + " of " + Ward + " at " + Location;
                         sw.WriteLine(Text2Write);
                     }
+
+                    LblCheck.Text = "Log: ";
+                    LblCheck.ForeColor = Color.Black;
                 }
                 else if (dr == DialogResult.No)
                 {
                     //Nothing to do
                 }
+
             }
         }
 

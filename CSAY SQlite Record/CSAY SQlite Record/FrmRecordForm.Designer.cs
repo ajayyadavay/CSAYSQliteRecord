@@ -72,6 +72,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.ComboBoxFiscalYear = new System.Windows.Forms.ComboBox();
             this.ComboBoxProjectName = new System.Windows.Forms.ComboBox();
             this.TxtProjectID = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -150,7 +151,7 @@
             this.TxtUCContact = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.TxtUCName = new System.Windows.Forms.TextBox();
-            this.ComboBoxFiscalYear = new System.Windows.Forms.ComboBox();
+            this.LblCheck = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -366,7 +367,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(10, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 23);
@@ -416,7 +417,7 @@
             this.TxtAddNetPay2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAddNetPay2.Location = new System.Drawing.Point(197, 58);
             this.TxtAddNetPay2.Name = "TxtAddNetPay2";
-            this.TxtAddNetPay2.Size = new System.Drawing.Size(394, 26);
+            this.TxtAddNetPay2.Size = new System.Drawing.Size(390, 26);
             this.TxtAddNetPay2.TabIndex = 102;
             // 
             // label13
@@ -435,7 +436,7 @@
             this.TxtAddContribution2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAddContribution2.Location = new System.Drawing.Point(197, 95);
             this.TxtAddContribution2.Name = "TxtAddContribution2";
-            this.TxtAddContribution2.Size = new System.Drawing.Size(394, 26);
+            this.TxtAddContribution2.Size = new System.Drawing.Size(390, 26);
             this.TxtAddContribution2.TabIndex = 100;
             // 
             // label14
@@ -454,7 +455,7 @@
             this.TxtAddEstiBud2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAddEstiBud2.Location = new System.Drawing.Point(197, 22);
             this.TxtAddEstiBud2.Name = "TxtAddEstiBud2";
-            this.TxtAddEstiBud2.Size = new System.Drawing.Size(394, 26);
+            this.TxtAddEstiBud2.Size = new System.Drawing.Size(390, 26);
             this.TxtAddEstiBud2.TabIndex = 98;
             // 
             // label15
@@ -652,6 +653,17 @@
             this.groupBox4.TabIndex = 120;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "General";
+            // 
+            // ComboBoxFiscalYear
+            // 
+            this.ComboBoxFiscalYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxFiscalYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxFiscalYear.FormattingEnabled = true;
+            this.ComboBoxFiscalYear.Location = new System.Drawing.Point(494, 19);
+            this.ComboBoxFiscalYear.Name = "ComboBoxFiscalYear";
+            this.ComboBoxFiscalYear.Size = new System.Drawing.Size(116, 28);
+            this.ComboBoxFiscalYear.TabIndex = 108;
+            this.ComboBoxFiscalYear.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFiscalYear_SelectedIndexChanged);
             // 
             // ComboBoxProjectName
             // 
@@ -1096,6 +1108,7 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.LblCheck);
             this.groupBox14.Controls.Add(this.label41);
             this.groupBox14.Controls.Add(this.TxtTotalContribution);
             this.groupBox14.Controls.Add(this.TxtContingencyPercent);
@@ -1115,7 +1128,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label41.ForeColor = System.Drawing.Color.Black;
             this.label41.Location = new System.Drawing.Point(10, 107);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(165, 23);
@@ -1127,7 +1140,7 @@
             this.TxtTotalContribution.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTotalContribution.Location = new System.Drawing.Point(197, 104);
             this.TxtTotalContribution.Name = "TxtTotalContribution";
-            this.TxtTotalContribution.Size = new System.Drawing.Size(394, 26);
+            this.TxtTotalContribution.Size = new System.Drawing.Size(294, 26);
             this.TxtTotalContribution.TabIndex = 104;
             // 
             // TxtContingencyPercent
@@ -1135,7 +1148,7 @@
             this.TxtContingencyPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContingencyPercent.Location = new System.Drawing.Point(197, 35);
             this.TxtContingencyPercent.Name = "TxtContingencyPercent";
-            this.TxtContingencyPercent.Size = new System.Drawing.Size(394, 26);
+            this.TxtContingencyPercent.Size = new System.Drawing.Size(294, 26);
             this.TxtContingencyPercent.TabIndex = 102;
             this.TxtContingencyPercent.Text = "3";
             // 
@@ -1143,7 +1156,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label44.ForeColor = System.Drawing.Color.Black;
             this.label44.Location = new System.Drawing.Point(10, 75);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(162, 23);
@@ -1155,7 +1168,7 @@
             this.TxtTotalNetPayable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTotalNetPayable.Location = new System.Drawing.Point(197, 72);
             this.TxtTotalNetPayable.Name = "TxtTotalNetPayable";
-            this.TxtTotalNetPayable.Size = new System.Drawing.Size(394, 26);
+            this.TxtTotalNetPayable.Size = new System.Drawing.Size(294, 26);
             this.TxtTotalNetPayable.TabIndex = 100;
             // 
             // label45
@@ -1550,16 +1563,16 @@
             this.TxtUCName.Size = new System.Drawing.Size(391, 26);
             this.TxtUCName.TabIndex = 106;
             // 
-            // ComboBoxFiscalYear
+            // LblCheck
             // 
-            this.ComboBoxFiscalYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxFiscalYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBoxFiscalYear.FormattingEnabled = true;
-            this.ComboBoxFiscalYear.Location = new System.Drawing.Point(494, 19);
-            this.ComboBoxFiscalYear.Name = "ComboBoxFiscalYear";
-            this.ComboBoxFiscalYear.Size = new System.Drawing.Size(116, 28);
-            this.ComboBoxFiscalYear.TabIndex = 108;
-            this.ComboBoxFiscalYear.SelectedIndexChanged += new System.EventHandler(this.ComboBoxFiscalYear_SelectedIndexChanged);
+            this.LblCheck.AutoSize = true;
+            this.LblCheck.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCheck.ForeColor = System.Drawing.Color.Black;
+            this.LblCheck.Location = new System.Drawing.Point(512, 75);
+            this.LblCheck.Name = "LblCheck";
+            this.LblCheck.Size = new System.Drawing.Size(40, 23);
+            this.LblCheck.TabIndex = 103;
+            this.LblCheck.Text = "Log:";
             // 
             // FrmRecordForm
             // 
@@ -1735,5 +1748,6 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox TxtTotalContribution;
         private System.Windows.Forms.ComboBox ComboBoxFiscalYear;
+        private System.Windows.Forms.Label LblCheck;
     }
 }
