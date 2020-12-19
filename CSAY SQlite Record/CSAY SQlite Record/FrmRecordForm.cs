@@ -351,8 +351,28 @@ namespace CSAY_SQlite_Record
 
                 //TxtTotalNetPayable.Text = NetPayable2.ToString();
                 //Contribution2 = Convert.ToDouble(EstimatedBudget2) - NetPayable2 - Contribution1;
-                TotalNetPay = Convert.ToDouble(TxtTotalNetPayable.Text);
-                TotalContribution = Convert.ToDouble(TxtTotalContribution.Text);
+
+                //Total Netpay
+                if (TxtTotalNetPayable.Text == "")
+                {
+                    TotalNetPay = 0;
+                }
+                else
+                {
+                    TotalNetPay = Convert.ToDouble(TxtTotalNetPayable.Text);
+                }
+                //TotalNetPay = Convert.ToDouble(TxtTotalNetPayable.Text);
+                //TotalContribution = Convert.ToDouble(TxtTotalContribution.Text);
+                // TotalContribution
+                if (TxtTotalContribution.Text == "")
+                {
+                    TotalContribution = 0;
+                }
+                else
+                {
+                    TotalContribution = Convert.ToDouble(TxtTotalContribution.Text);
+                }
+
                 NetPayable2 = TotalNetPay - NetPayable1;
                 Contribution2 = TotalContribution - Contribution1;
                 if(TotalNetPay <= NetPayable0)
