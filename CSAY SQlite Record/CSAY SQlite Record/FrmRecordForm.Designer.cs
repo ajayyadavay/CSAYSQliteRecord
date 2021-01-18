@@ -77,6 +77,7 @@
             this.TxtProjectID = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.ComboBoxRemark = new System.Windows.Forms.ComboBox();
             this.TxtDescription = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -109,6 +110,7 @@
             this.TxtFirstRunBill = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.LblCheck = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.TxtTotalContribution = new System.Windows.Forms.TextBox();
             this.TxtContingencyPercent = new System.Windows.Forms.TextBox();
@@ -151,7 +153,8 @@
             this.TxtUCContact = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.TxtUCName = new System.Windows.Forms.TextBox();
-            this.LblCheck = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.TxtEvalulationFactor = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -367,7 +370,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label10.Location = new System.Drawing.Point(10, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 23);
@@ -533,10 +536,10 @@
             // 
             this.TxtAddRemark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAddRemark.ForeColor = System.Drawing.Color.Black;
-            this.TxtAddRemark.Location = new System.Drawing.Point(105, 205);
+            this.TxtAddRemark.Location = new System.Drawing.Point(308, 205);
             this.TxtAddRemark.Name = "TxtAddRemark";
             this.TxtAddRemark.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtAddRemark.Size = new System.Drawing.Size(447, 26);
+            this.TxtAddRemark.Size = new System.Drawing.Size(244, 26);
             this.TxtAddRemark.TabIndex = 112;
             // 
             // BtnAddRecord
@@ -698,6 +701,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.ComboBoxRemark);
             this.groupBox5.Controls.Add(this.TxtDescription);
             this.groupBox5.Controls.Add(this.label21);
             this.groupBox5.Controls.Add(this.label19);
@@ -713,6 +717,17 @@
             this.groupBox5.TabIndex = 121;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Others";
+            // 
+            // ComboBoxRemark
+            // 
+            this.ComboBoxRemark.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxRemark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxRemark.FormattingEnabled = true;
+            this.ComboBoxRemark.Location = new System.Drawing.Point(105, 203);
+            this.ComboBoxRemark.Name = "ComboBoxRemark";
+            this.ComboBoxRemark.Size = new System.Drawing.Size(198, 28);
+            this.ComboBoxRemark.TabIndex = 109;
+            this.ComboBoxRemark.SelectedIndexChanged += new System.EventHandler(this.ComboBoxRemark_SelectedIndexChanged);
             // 
             // TxtDescription
             // 
@@ -1108,6 +1123,8 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.label42);
+            this.groupBox14.Controls.Add(this.TxtEvalulationFactor);
             this.groupBox14.Controls.Add(this.LblCheck);
             this.groupBox14.Controls.Add(this.label41);
             this.groupBox14.Controls.Add(this.TxtTotalContribution);
@@ -1119,10 +1136,21 @@
             this.groupBox14.ForeColor = System.Drawing.Color.Green;
             this.groupBox14.Location = new System.Drawing.Point(672, 197);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(607, 146);
+            this.groupBox14.Size = new System.Drawing.Size(607, 180);
             this.groupBox14.TabIndex = 120;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Others (Not stored in Database)";
+            // 
+            // LblCheck
+            // 
+            this.LblCheck.AutoSize = true;
+            this.LblCheck.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCheck.ForeColor = System.Drawing.Color.Black;
+            this.LblCheck.Location = new System.Drawing.Point(512, 75);
+            this.LblCheck.Name = "LblCheck";
+            this.LblCheck.Size = new System.Drawing.Size(40, 23);
+            this.LblCheck.TabIndex = 103;
+            this.LblCheck.Text = "Log:";
             // 
             // label41
             // 
@@ -1563,16 +1591,24 @@
             this.TxtUCName.Size = new System.Drawing.Size(391, 26);
             this.TxtUCName.TabIndex = 106;
             // 
-            // LblCheck
+            // label42
             // 
-            this.LblCheck.AutoSize = true;
-            this.LblCheck.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCheck.ForeColor = System.Drawing.Color.Black;
-            this.LblCheck.Location = new System.Drawing.Point(512, 75);
-            this.LblCheck.Name = "LblCheck";
-            this.LblCheck.Size = new System.Drawing.Size(40, 23);
-            this.LblCheck.TabIndex = 103;
-            this.LblCheck.Text = "Log:";
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.Location = new System.Drawing.Point(10, 139);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(160, 23);
+            this.label42.TabIndex = 105;
+            this.label42.Text = "D. Evaluation Factor";
+            // 
+            // TxtEvalulationFactor
+            // 
+            this.TxtEvalulationFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEvalulationFactor.Location = new System.Drawing.Point(197, 136);
+            this.TxtEvalulationFactor.Name = "TxtEvalulationFactor";
+            this.TxtEvalulationFactor.Size = new System.Drawing.Size(294, 26);
+            this.TxtEvalulationFactor.TabIndex = 106;
             // 
             // FrmRecordForm
             // 
@@ -1749,5 +1785,8 @@
         private System.Windows.Forms.TextBox TxtTotalContribution;
         private System.Windows.Forms.ComboBox ComboBoxFiscalYear;
         private System.Windows.Forms.Label LblCheck;
+        private System.Windows.Forms.ComboBox ComboBoxRemark;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox TxtEvalulationFactor;
     }
 }

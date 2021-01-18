@@ -254,6 +254,14 @@ namespace CSAY_SQlite_Record
             ComboBoxBoard.Items.Add("Not Available");
             ComboBoxBoard.Items.Add("Not Required");
             ComboBoxBoard.Items.Add("Specify Others");*/
+
+            //Add ---> Remark 
+            string[] RemarkList = System.IO.File.ReadAllLines(@".\ComboBoxList\ProjectName.txt");
+            foreach (var line in RemarkList)
+            {
+                //string[] tokens = line.Split('\n');
+               ComboBoxRemark.Items.Add(line);
+            }
         }
 
         private void BtnAddCalculate_Click(object sender, EventArgs e)
@@ -321,19 +329,21 @@ namespace CSAY_SQlite_Record
                 }
 
                 //Netpayable1
-                if (TxtAddNetPay1.Text == "")
+                /*if (TxtAddNetPay1.Text == "")
                 {
                     NetPayable1 = 0;
                 }
                 else
                 {
                     NetPayable1 = Convert.ToDouble(TxtAddNetPay1.Text);
-                }
+                }*/
 
-                //NetPayable1 = Convert.ToDouble(EstimatedBudget1) * 0.9;
+                double EvaluationFactor = NetPayable0 / Convert.ToDouble(EstimatedBudget0);
+                TxtEvalulationFactor.Text = EvaluationFactor.ToString();
+                NetPayable1 = Convert.ToDouble(EstimatedBudget1) * NetPayable0 / Convert.ToDouble(EstimatedBudget0);
                 Contribution1 = Convert.ToDouble(EstimatedBudget1) - NetPayable1;
-                //TxtAddNetPay1.Text = NetPayable1.ToString();
-                TxtAddContribution1.Text = Contribution1.ToString();
+                TxtAddNetPay1.Text = NetPayable1.ToString("0.00");
+                TxtAddContribution1.Text = Contribution1.ToString("0.00");
 
                 
 
@@ -352,8 +362,13 @@ namespace CSAY_SQlite_Record
                 //TxtTotalNetPayable.Text = NetPayable2.ToString();
                 //Contribution2 = Convert.ToDouble(EstimatedBudget2) - NetPayable2 - Contribution1;
 
+                TotalNetPay = Convert.ToDouble(EstimatedBudget2) * NetPayable0 / Convert.ToDouble(EstimatedBudget0); ;
+                TxtTotalNetPayable.Text = TotalNetPay.ToString("0.00");
+                TotalContribution = Convert.ToDouble(EstimatedBudget2) - Convert.ToDouble(TotalNetPay);
+                TxtTotalContribution.Text = TotalContribution.ToString("0.00");
+
                 //Total Netpay
-                if (TxtTotalNetPayable.Text == "")
+                /*if (TxtTotalNetPayable.Text == "")
                 {
                     TotalNetPay = 0;
                 }
@@ -371,7 +386,7 @@ namespace CSAY_SQlite_Record
                 else
                 {
                     TotalContribution = Convert.ToDouble(TxtTotalContribution.Text);
-                }
+                }*/
 
                 NetPayable2 = TotalNetPay - NetPayable1;
                 Contribution2 = TotalContribution - Contribution1;
@@ -391,11 +406,11 @@ namespace CSAY_SQlite_Record
                 //TxtAddNetPay2.Text = NetPayable2.ToString();
 
 
-                TxtAddContingency.Text = Contingency.ToString();
-                TxtAddNetPay0.Text = NetPayable0.ToString();
-                TxtAddContribution0.Text = Contribution0.ToString();
-                TxtAddContribution2.Text = Contribution2.ToString();
-                TxtAddNetPay2.Text = NetPayable2.ToString();
+                TxtAddContingency.Text = Contingency.ToString("0.00");
+                TxtAddNetPay0.Text = NetPayable0.ToString("0.00");
+                TxtAddContribution0.Text = Contribution0.ToString("0.00");
+                TxtAddContribution2.Text = Contribution2.ToString("0.00");
+                TxtAddNetPay2.Text = NetPayable2.ToString("0.00");
             }
             catch
             {
@@ -1064,6 +1079,28 @@ namespace CSAY_SQlite_Record
         private void ComboBoxFiscalYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             TxtAddFiscalYear.Text = ComboBoxFiscalYear.Text;
+        }
+
+        private void ComboBoxRemark_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtAddRemark.Text = ComboBoxRemark.Text;
+        }
+
+        public void EvaluationFactor()
+        {
+            try
+            {
+               // string EstimatedBudget0 = TxtAddEstiBud0.Text;
+               // string NetPayable0 = TxtAddNetPay0.Text;
+                
+                double EvalFacto = Convert.ToDouble(TxtAddNetPay0.Text) / Convert.ToDouble(TxtAddEstiBud0.Text);
+                TxtEvalulationFactor.Text = EvalFacto.ToString();
+
+            }
+            catch
+            {
+
+            }
         }
 
         private void ComboBoxBoard_SelectedIndexChanged(object sender, EventArgs e)
