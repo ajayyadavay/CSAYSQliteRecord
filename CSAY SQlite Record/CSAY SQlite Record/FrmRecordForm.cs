@@ -165,6 +165,8 @@ namespace CSAY_SQlite_Record
 
                 LblCheck.Text = "Log: " ;
                 LblCheck.ForeColor = Color.Black;
+                LblCheckEvalFacto.Text = "Log: ";
+                LblCheckEvalFacto.ForeColor = Color.Black;
 
                 TxtAddLog.AppendText("Activity: Record Successfully Added : " + ProjectName + " of " + Ward + " at " + Location);
                 TxtAddLog.AppendText(Environment.NewLine);
@@ -362,7 +364,16 @@ namespace CSAY_SQlite_Record
                 //TxtTotalNetPayable.Text = NetPayable2.ToString();
                 //Contribution2 = Convert.ToDouble(EstimatedBudget2) - NetPayable2 - Contribution1;
 
-                TotalNetPay = Convert.ToDouble(EstimatedBudget2) * NetPayable0 / Convert.ToDouble(EstimatedBudget0); ;
+                TotalNetPay = Convert.ToDouble(EstimatedBudget2) * NetPayable0 / Convert.ToDouble(EstimatedBudget0);
+                if (TotalNetPay <= NetPayable0)
+                {
+                    TotalNetPay = Convert.ToDouble(EstimatedBudget2) * NetPayable0 / Convert.ToDouble(EstimatedBudget0);
+                }
+                else
+                {
+                    TotalNetPay = NetPayable0;
+                }
+                
                 TxtTotalNetPayable.Text = TotalNetPay.ToString("0.00");
                 TotalContribution = Convert.ToDouble(EstimatedBudget2) - Convert.ToDouble(TotalNetPay);
                 TxtTotalContribution.Text = TotalContribution.ToString("0.00");
@@ -399,6 +410,18 @@ namespace CSAY_SQlite_Record
                 {
                     LblCheck.Text = "Log: " + "Review";
                     LblCheck.ForeColor = Color.Red;
+                }
+
+                //evaluation factor check
+                if (EvaluationFactor <= 0.9)
+                {
+                    LblCheckEvalFacto.Text = "Log: " + "OK";
+                    LblCheckEvalFacto.ForeColor = Color.Green;
+                }
+                else
+                {
+                    LblCheckEvalFacto.Text = "Log: " + "Review";
+                    LblCheckEvalFacto.ForeColor = Color.Red;
                 }
                 //TxtTotalContribution.Text = (Contribution2 + Contribution1).ToString();
 
@@ -451,7 +474,9 @@ namespace CSAY_SQlite_Record
             BtnDisplay.Enabled = false;
 
             LblCheck.Text = "Log: ";
+            LblCheckEvalFacto.Text = "Log: ";
             LblCheck.ForeColor = Color.Black;
+            LblCheckEvalFacto.ForeColor = Color.Black;
         }
 
         private void RadioBtnDisModDel_CheckedChanged(object sender, EventArgs e)
@@ -466,6 +491,8 @@ namespace CSAY_SQlite_Record
 
             LblCheck.Text = "Log: ";
             LblCheck.ForeColor = Color.Black;
+            LblCheckEvalFacto.Text = "Log: ";
+            LblCheckEvalFacto.ForeColor = Color.Black;
         }
         public void DeleteTextFields()
         {
@@ -625,6 +652,8 @@ namespace CSAY_SQlite_Record
                 }
                 LblCheck.Text = "Log: ";
                 LblCheck.ForeColor = Color.Black;
+                LblCheckEvalFacto.Text = "Log: ";
+                LblCheckEvalFacto.ForeColor = Color.Black;
             }
             else if (dr == DialogResult.No)
             {
@@ -673,6 +702,8 @@ namespace CSAY_SQlite_Record
 
                     LblCheck.Text = "Log: ";
                     LblCheck.ForeColor = Color.Black;
+                    LblCheckEvalFacto.Text = "Log: ";
+                    LblCheckEvalFacto.ForeColor = Color.Black;
                 }
                 else if (dr == DialogResult.No)
                 {

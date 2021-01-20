@@ -110,6 +110,8 @@
             this.TxtFirstRunBill = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.TxtEvalulationFactor = new System.Windows.Forms.TextBox();
             this.LblCheck = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.TxtTotalContribution = new System.Windows.Forms.TextBox();
@@ -153,8 +155,7 @@
             this.TxtUCContact = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.TxtUCName = new System.Windows.Forms.TextBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.TxtEvalulationFactor = new System.Windows.Forms.TextBox();
+            this.LblCheckEvalFacto = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1123,6 +1124,7 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.LblCheckEvalFacto);
             this.groupBox14.Controls.Add(this.label42);
             this.groupBox14.Controls.Add(this.TxtEvalulationFactor);
             this.groupBox14.Controls.Add(this.LblCheck);
@@ -1141,6 +1143,25 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Others (Not stored in Database)";
             // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label42.Location = new System.Drawing.Point(10, 139);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(160, 23);
+            this.label42.TabIndex = 105;
+            this.label42.Text = "D. Evaluation Factor";
+            // 
+            // TxtEvalulationFactor
+            // 
+            this.TxtEvalulationFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEvalulationFactor.Location = new System.Drawing.Point(197, 136);
+            this.TxtEvalulationFactor.Name = "TxtEvalulationFactor";
+            this.TxtEvalulationFactor.Size = new System.Drawing.Size(294, 26);
+            this.TxtEvalulationFactor.TabIndex = 106;
+            // 
             // LblCheck
             // 
             this.LblCheck.AutoSize = true;
@@ -1156,7 +1177,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label41.Location = new System.Drawing.Point(10, 107);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(165, 23);
@@ -1184,7 +1205,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label44.Location = new System.Drawing.Point(10, 75);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(162, 23);
@@ -1591,24 +1612,16 @@
             this.TxtUCName.Size = new System.Drawing.Size(391, 26);
             this.TxtUCName.TabIndex = 106;
             // 
-            // label42
+            // LblCheckEvalFacto
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(10, 139);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(160, 23);
-            this.label42.TabIndex = 105;
-            this.label42.Text = "D. Evaluation Factor";
-            // 
-            // TxtEvalulationFactor
-            // 
-            this.TxtEvalulationFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtEvalulationFactor.Location = new System.Drawing.Point(197, 136);
-            this.TxtEvalulationFactor.Name = "TxtEvalulationFactor";
-            this.TxtEvalulationFactor.Size = new System.Drawing.Size(294, 26);
-            this.TxtEvalulationFactor.TabIndex = 106;
+            this.LblCheckEvalFacto.AutoSize = true;
+            this.LblCheckEvalFacto.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCheckEvalFacto.ForeColor = System.Drawing.Color.Black;
+            this.LblCheckEvalFacto.Location = new System.Drawing.Point(512, 139);
+            this.LblCheckEvalFacto.Name = "LblCheckEvalFacto";
+            this.LblCheckEvalFacto.Size = new System.Drawing.Size(40, 23);
+            this.LblCheckEvalFacto.TabIndex = 107;
+            this.LblCheckEvalFacto.Text = "Log:";
             // 
             // FrmRecordForm
             // 
@@ -1788,5 +1801,6 @@
         private System.Windows.Forms.ComboBox ComboBoxRemark;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox TxtEvalulationFactor;
+        private System.Windows.Forms.Label LblCheckEvalFacto;
     }
 }
