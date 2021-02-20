@@ -163,10 +163,14 @@ namespace CSAY_SQlite_Record
                 ComboBoxLabReport.SelectedIndex = -1;
                 ComboBoxBoard.SelectedIndex = -1;
 
-                LblCheck.Text = "Log: " ;
+                /*LblCheck.Text = "Log: " ;
                 LblCheck.ForeColor = Color.Black;
                 LblCheckEvalFacto.Text = "Log: ";
                 LblCheckEvalFacto.ForeColor = Color.Black;
+                lblcheckRunningRatio.Text = "Log: ";
+                lblcheckRunningRatio.ForeColor = Color.Black;*/
+
+                Initial_State_of_Lablel();
 
                 TxtAddLog.AppendText("Activity: Record Successfully Added : " + ProjectName + " of " + Ward + " at " + Location);
                 TxtAddLog.AppendText(Environment.NewLine);
@@ -344,10 +348,10 @@ namespace CSAY_SQlite_Record
                 TxtEvalulationFactor.Text = EvaluationFactor.ToString();
                 NetPayable1 = Convert.ToDouble(EstimatedBudget1) * NetPayable0 / Convert.ToDouble(EstimatedBudget0);
                 Contribution1 = Convert.ToDouble(EstimatedBudget1) - NetPayable1;
+                double Running_InitialRatio = NetPayable1 / NetPayable0;
                 TxtAddNetPay1.Text = NetPayable1.ToString("0.00");
                 TxtAddContribution1.Text = Contribution1.ToString("0.00");
-
-                
+                TxtRunning_InitialRatio.Text = Running_InitialRatio.ToString("0.00");
 
                 //Final Bill
                 double NetPayable2, Contribution2,TotalNetPay,TotalContribution;
@@ -423,6 +427,18 @@ namespace CSAY_SQlite_Record
                     LblCheckEvalFacto.Text = "Log: " + "Review";
                     LblCheckEvalFacto.ForeColor = Color.Red;
                 }
+
+                //Running Initial ratio check
+                if (Running_InitialRatio < 1)
+                {
+                    lblcheckRunningRatio.Text = "Log: " + "OK";
+                    lblcheckRunningRatio.ForeColor = Color.Green;
+                }
+                else
+                {
+                    lblcheckRunningRatio.Text = "Log: " + "Review";
+                    lblcheckRunningRatio.ForeColor = Color.Red;
+                }
                 //TxtTotalContribution.Text = (Contribution2 + Contribution1).ToString();
 
                 //NetPayable2 = NetPayable2 - NetPayable1;
@@ -473,10 +489,14 @@ namespace CSAY_SQlite_Record
             BtnModify.Enabled = false;
             BtnDisplay.Enabled = false;
 
-            LblCheck.Text = "Log: ";
+            /*LblCheck.Text = "Log: ";
             LblCheckEvalFacto.Text = "Log: ";
             LblCheck.ForeColor = Color.Black;
             LblCheckEvalFacto.ForeColor = Color.Black;
+            lblcheckRunningRatio.Text = "Log: ";
+            lblcheckRunningRatio.ForeColor = Color.Black;*/
+
+            Initial_State_of_Lablel();
         }
 
         private void RadioBtnDisModDel_CheckedChanged(object sender, EventArgs e)
@@ -489,10 +509,14 @@ namespace CSAY_SQlite_Record
             BtnModify.Enabled = true;
             BtnDisplay.Enabled = true;
 
-            LblCheck.Text = "Log: ";
+            /*LblCheck.Text = "Log: ";
             LblCheck.ForeColor = Color.Black;
             LblCheckEvalFacto.Text = "Log: ";
             LblCheckEvalFacto.ForeColor = Color.Black;
+            lblcheckRunningRatio.Text = "Log: ";
+            lblcheckRunningRatio.ForeColor = Color.Black;*/
+
+            Initial_State_of_Lablel();
         }
         public void DeleteTextFields()
         {
@@ -700,10 +724,14 @@ namespace CSAY_SQlite_Record
                         sw.WriteLine(Text2Write);
                     }
 
-                    LblCheck.Text = "Log: ";
+                    /*LblCheck.Text = "Log: ";
                     LblCheck.ForeColor = Color.Black;
                     LblCheckEvalFacto.Text = "Log: ";
                     LblCheckEvalFacto.ForeColor = Color.Black;
+                    lblcheckRunningRatio.Text = "Log: ";
+                    lblcheckRunningRatio.ForeColor = Color.Black;*/
+
+                    Initial_State_of_Lablel();
                 }
                 else if (dr == DialogResult.No)
                 {
@@ -711,6 +739,16 @@ namespace CSAY_SQlite_Record
                 }
 
             }
+        }
+         
+        public void Initial_State_of_Lablel()
+        {
+            LblCheck.Text = "Log: ";
+            LblCheck.ForeColor = Color.Black;
+            LblCheckEvalFacto.Text = "Log: ";
+            LblCheckEvalFacto.ForeColor = Color.Black;
+            lblcheckRunningRatio.Text = "Log: ";
+            lblcheckRunningRatio.ForeColor = Color.Black;
         }
 
         private void BtnDisplay_Click(object sender, EventArgs e)

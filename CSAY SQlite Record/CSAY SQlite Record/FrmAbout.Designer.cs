@@ -32,6 +32,7 @@
             this.LblRecordNo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnExit
@@ -44,7 +45,7 @@
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExit.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExit.ForeColor = System.Drawing.Color.Black;
-            this.BtnExit.Location = new System.Drawing.Point(470, 270);
+            this.BtnExit.Location = new System.Drawing.Point(565, 324);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(129, 33);
             this.BtnExit.TabIndex = 60;
@@ -80,18 +81,30 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(278, 244);
+            this.label2.Location = new System.Drawing.Point(286, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 23);
             this.label2.TabIndex = 63;
             this.label2.Text = "-Created by Ajay Yadav";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(201, 282);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(306, 46);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Github: https://github.com/ajayyadavay\r\ne-mail: ajayyadavay02@gmail.com";
             // 
             // FrmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(611, 315);
+            this.ClientSize = new System.Drawing.Size(706, 369);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LblRecordNo);
@@ -111,5 +124,6 @@
         private System.Windows.Forms.Label LblRecordNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

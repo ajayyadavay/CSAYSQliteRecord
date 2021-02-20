@@ -110,6 +110,7 @@
             this.TxtFirstRunBill = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.LblCheckEvalFacto = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.TxtEvalulationFactor = new System.Windows.Forms.TextBox();
             this.LblCheck = new System.Windows.Forms.Label();
@@ -155,7 +156,9 @@
             this.TxtUCContact = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.TxtUCName = new System.Windows.Forms.TextBox();
-            this.LblCheckEvalFacto = new System.Windows.Forms.Label();
+            this.lblcheckRunningRatio = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.TxtRunning_InitialRatio = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -314,7 +317,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label7.Location = new System.Drawing.Point(10, 66);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 23);
@@ -333,7 +336,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label8.Location = new System.Drawing.Point(10, 174);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 23);
@@ -352,7 +355,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label9.Location = new System.Drawing.Point(10, 138);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 23);
@@ -371,7 +374,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label10.Location = new System.Drawing.Point(10, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 23);
@@ -390,7 +393,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label11.Location = new System.Drawing.Point(10, 97);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 23);
@@ -428,7 +431,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label13.Location = new System.Drawing.Point(10, 61);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(143, 23);
@@ -447,7 +450,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label14.Location = new System.Drawing.Point(10, 98);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(146, 23);
@@ -613,7 +616,7 @@
             this.groupBox2.Size = new System.Drawing.Size(636, 136);
             this.groupBox2.TabIndex = 118;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Mid";
+            this.groupBox2.Text = "Running";
             // 
             // groupBox3
             // 
@@ -1124,6 +1127,9 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.lblcheckRunningRatio);
+            this.groupBox14.Controls.Add(this.label47);
+            this.groupBox14.Controls.Add(this.TxtRunning_InitialRatio);
             this.groupBox14.Controls.Add(this.LblCheckEvalFacto);
             this.groupBox14.Controls.Add(this.label42);
             this.groupBox14.Controls.Add(this.TxtEvalulationFactor);
@@ -1138,16 +1144,27 @@
             this.groupBox14.ForeColor = System.Drawing.Color.Green;
             this.groupBox14.Location = new System.Drawing.Point(672, 197);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(607, 180);
+            this.groupBox14.Size = new System.Drawing.Size(607, 213);
             this.groupBox14.TabIndex = 120;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Others (Not stored in Database)";
+            // 
+            // LblCheckEvalFacto
+            // 
+            this.LblCheckEvalFacto.AutoSize = true;
+            this.LblCheckEvalFacto.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCheckEvalFacto.ForeColor = System.Drawing.Color.Black;
+            this.LblCheckEvalFacto.Location = new System.Drawing.Point(512, 139);
+            this.LblCheckEvalFacto.Name = "LblCheckEvalFacto";
+            this.LblCheckEvalFacto.Size = new System.Drawing.Size(40, 23);
+            this.LblCheckEvalFacto.TabIndex = 107;
+            this.LblCheckEvalFacto.Text = "Log:";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label42.Location = new System.Drawing.Point(10, 139);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(160, 23);
@@ -1177,7 +1194,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label41.Location = new System.Drawing.Point(10, 107);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(165, 23);
@@ -1205,7 +1222,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label44.Location = new System.Drawing.Point(10, 75);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(162, 23);
@@ -1224,7 +1241,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label45.Location = new System.Drawing.Point(10, 38);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(136, 23);
@@ -1612,16 +1629,35 @@
             this.TxtUCName.Size = new System.Drawing.Size(391, 26);
             this.TxtUCName.TabIndex = 106;
             // 
-            // LblCheckEvalFacto
+            // lblcheckRunningRatio
             // 
-            this.LblCheckEvalFacto.AutoSize = true;
-            this.LblCheckEvalFacto.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCheckEvalFacto.ForeColor = System.Drawing.Color.Black;
-            this.LblCheckEvalFacto.Location = new System.Drawing.Point(512, 139);
-            this.LblCheckEvalFacto.Name = "LblCheckEvalFacto";
-            this.LblCheckEvalFacto.Size = new System.Drawing.Size(40, 23);
-            this.LblCheckEvalFacto.TabIndex = 107;
-            this.LblCheckEvalFacto.Text = "Log:";
+            this.lblcheckRunningRatio.AutoSize = true;
+            this.lblcheckRunningRatio.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcheckRunningRatio.ForeColor = System.Drawing.Color.Black;
+            this.lblcheckRunningRatio.Location = new System.Drawing.Point(512, 173);
+            this.lblcheckRunningRatio.Name = "lblcheckRunningRatio";
+            this.lblcheckRunningRatio.Size = new System.Drawing.Size(40, 23);
+            this.lblcheckRunningRatio.TabIndex = 110;
+            this.lblcheckRunningRatio.Text = "Log:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label47.Location = new System.Drawing.Point(10, 173);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(182, 23);
+            this.label47.TabIndex = 108;
+            this.label47.Text = "E. Running/Initial ratio";
+            // 
+            // TxtRunning_InitialRatio
+            // 
+            this.TxtRunning_InitialRatio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRunning_InitialRatio.Location = new System.Drawing.Point(197, 170);
+            this.TxtRunning_InitialRatio.Name = "TxtRunning_InitialRatio";
+            this.TxtRunning_InitialRatio.Size = new System.Drawing.Size(294, 26);
+            this.TxtRunning_InitialRatio.TabIndex = 109;
             // 
             // FrmRecordForm
             // 
@@ -1802,5 +1838,8 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox TxtEvalulationFactor;
         private System.Windows.Forms.Label LblCheckEvalFacto;
+        private System.Windows.Forms.Label lblcheckRunningRatio;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox TxtRunning_InitialRatio;
     }
 }
