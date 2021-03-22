@@ -110,6 +110,9 @@
             this.TxtFirstRunBill = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.lblcheckRunningRatio = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.TxtRunning_InitialRatio = new System.Windows.Forms.TextBox();
             this.LblCheckEvalFacto = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.TxtEvalulationFactor = new System.Windows.Forms.TextBox();
@@ -156,9 +159,7 @@
             this.TxtUCContact = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.TxtUCName = new System.Windows.Forms.TextBox();
-            this.lblcheckRunningRatio = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.TxtRunning_InitialRatio = new System.Windows.Forms.TextBox();
+            this.ComboBoxRefer = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1149,6 +1150,36 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Others (Not stored in Database)";
             // 
+            // lblcheckRunningRatio
+            // 
+            this.lblcheckRunningRatio.AutoSize = true;
+            this.lblcheckRunningRatio.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcheckRunningRatio.ForeColor = System.Drawing.Color.Black;
+            this.lblcheckRunningRatio.Location = new System.Drawing.Point(512, 173);
+            this.lblcheckRunningRatio.Name = "lblcheckRunningRatio";
+            this.lblcheckRunningRatio.Size = new System.Drawing.Size(40, 23);
+            this.lblcheckRunningRatio.TabIndex = 110;
+            this.lblcheckRunningRatio.Text = "Log:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label47.Location = new System.Drawing.Point(10, 173);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(182, 23);
+            this.label47.TabIndex = 108;
+            this.label47.Text = "E. Running/Initial ratio";
+            // 
+            // TxtRunning_InitialRatio
+            // 
+            this.TxtRunning_InitialRatio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRunning_InitialRatio.Location = new System.Drawing.Point(197, 170);
+            this.TxtRunning_InitialRatio.Name = "TxtRunning_InitialRatio";
+            this.TxtRunning_InitialRatio.Size = new System.Drawing.Size(294, 26);
+            this.TxtRunning_InitialRatio.TabIndex = 109;
+            // 
             // LblCheckEvalFacto
             // 
             this.LblCheckEvalFacto.AutoSize = true;
@@ -1472,13 +1503,14 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.ComboBoxRefer);
             this.groupBox13.Controls.Add(this.label43);
             this.groupBox13.Controls.Add(this.TxtRefer);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.ForeColor = System.Drawing.Color.Green;
             this.groupBox13.Location = new System.Drawing.Point(769, 182);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(477, 96);
+            this.groupBox13.Size = new System.Drawing.Size(521, 96);
             this.groupBox13.TabIndex = 124;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Refer Previous Estimate";
@@ -1497,9 +1529,9 @@
             // TxtRefer
             // 
             this.TxtRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRefer.Location = new System.Drawing.Point(140, 35);
+            this.TxtRefer.Location = new System.Drawing.Point(320, 34);
             this.TxtRefer.Name = "TxtRefer";
-            this.TxtRefer.Size = new System.Drawing.Size(297, 26);
+            this.TxtRefer.Size = new System.Drawing.Size(185, 26);
             this.TxtRefer.TabIndex = 106;
             // 
             // groupBox12
@@ -1629,35 +1661,16 @@
             this.TxtUCName.Size = new System.Drawing.Size(391, 26);
             this.TxtUCName.TabIndex = 106;
             // 
-            // lblcheckRunningRatio
+            // ComboBoxRefer
             // 
-            this.lblcheckRunningRatio.AutoSize = true;
-            this.lblcheckRunningRatio.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcheckRunningRatio.ForeColor = System.Drawing.Color.Black;
-            this.lblcheckRunningRatio.Location = new System.Drawing.Point(512, 173);
-            this.lblcheckRunningRatio.Name = "lblcheckRunningRatio";
-            this.lblcheckRunningRatio.Size = new System.Drawing.Size(40, 23);
-            this.lblcheckRunningRatio.TabIndex = 110;
-            this.lblcheckRunningRatio.Text = "Log:";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label47.Location = new System.Drawing.Point(10, 173);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(182, 23);
-            this.label47.TabIndex = 108;
-            this.label47.Text = "E. Running/Initial ratio";
-            // 
-            // TxtRunning_InitialRatio
-            // 
-            this.TxtRunning_InitialRatio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRunning_InitialRatio.Location = new System.Drawing.Point(197, 170);
-            this.TxtRunning_InitialRatio.Name = "TxtRunning_InitialRatio";
-            this.TxtRunning_InitialRatio.Size = new System.Drawing.Size(294, 26);
-            this.TxtRunning_InitialRatio.TabIndex = 109;
+            this.ComboBoxRefer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxRefer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxRefer.FormattingEnabled = true;
+            this.ComboBoxRefer.Location = new System.Drawing.Point(91, 33);
+            this.ComboBoxRefer.Name = "ComboBoxRefer";
+            this.ComboBoxRefer.Size = new System.Drawing.Size(210, 28);
+            this.ComboBoxRefer.TabIndex = 108;
+            this.ComboBoxRefer.SelectedIndexChanged += new System.EventHandler(this.ComboBoxRefer_SelectedIndexChanged);
             // 
             // FrmRecordForm
             // 
@@ -1841,5 +1854,6 @@
         private System.Windows.Forms.Label lblcheckRunningRatio;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox TxtRunning_InitialRatio;
+        private System.Windows.Forms.ComboBox ComboBoxRefer;
     }
 }

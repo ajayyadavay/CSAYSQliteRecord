@@ -162,6 +162,8 @@ namespace CSAY_SQlite_Record
                 ComboBoxAddBudgetType.SelectedIndex = -1;
                 ComboBoxLabReport.SelectedIndex = -1;
                 ComboBoxBoard.SelectedIndex = -1;
+                ComboBoxRemark.SelectedIndex = -1; 
+                ComboBoxRefer.SelectedIndex = -1;
 
                 /*LblCheck.Text = "Log: " ;
                 LblCheck.ForeColor = Color.Black;
@@ -267,6 +269,14 @@ namespace CSAY_SQlite_Record
             {
                 //string[] tokens = line.Split('\n');
                ComboBoxRemark.Items.Add(line);
+            }
+
+            //Add ---> Refer
+            string[] ReferList = System.IO.File.ReadAllLines(@".\ComboBoxList\Refer.txt");
+            foreach (var line in ReferList)
+            {
+                //string[] tokens = line.Split('\n');
+                ComboBoxRefer.Items.Add(line);
             }
         }
 
@@ -1170,6 +1180,11 @@ namespace CSAY_SQlite_Record
             {
 
             }
+        }
+
+        private void ComboBoxRefer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TxtRefer.Text = ComboBoxRefer.Text;
         }
 
         private void ComboBoxBoard_SelectedIndexChanged(object sender, EventArgs e)
